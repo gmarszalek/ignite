@@ -6,6 +6,10 @@ export const loadDetail = (id) => async (dispatch) => {
     type: "LOADING_DETAIL",
   });
 
+  dispatch({
+    type: "LOADING_DETAIL",
+  });
+
   const detailData = await axios.get(gameDetailsURL(id));
   const screenShotData = await axios.get(gameScreenshotURL(id));
 
